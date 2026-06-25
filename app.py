@@ -22,7 +22,7 @@ victims  = []
 ser      = None
 ser_lock = threading.Lock()
 
-# ── SERIAL THREAD ─────────────────────────────────────────────────────────────
+
 def serial_thread():
     global ser
     while True:
@@ -78,7 +78,6 @@ def send_cmd(cmd):
     except Exception as e:
         print(f"[CMD] Error: {e}")
 
-# ── ROUTES ────────────────────────────────────────────────────────────────────
 @app.route("/")
 def index(): return render_template("index.html")
 
